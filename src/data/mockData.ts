@@ -1,4 +1,4 @@
-import { ServiceCategory, Professional, Booking } from '../types';
+import { ServiceCategory, Professional, Booking, UpcomingService } from '../types';
 
 export const CITIES = [
   'Mumbai',
