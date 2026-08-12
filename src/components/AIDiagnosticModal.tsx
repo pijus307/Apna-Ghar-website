@@ -70,10 +70,16 @@ export const AIDiagnosticModal: React.FC<AIDiagnosticModalProps> = ({
         }),
       });
 
-      const data = await response.json();
+      const resText = await response.text();
+      let data: any = {};
+      try {
+        data = resText ? JSON.parse(resText) : {};
+      } catch (parseErr) {
+        console.error('Failed to parse diagnostic JSON response:', resText);
+      }
 
       if (!response.ok || !data.success) {
-        throw new Error(data.error || 'Failed to complete diagnosis');
+        throw new Error(data.error || 'Failed to complete diagnosis. Please try again.');
       }
 
       setDiagnosis(data.diagnosis);

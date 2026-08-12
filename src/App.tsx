@@ -12,6 +12,7 @@ import { PartnerOnboardingModal } from './components/PartnerOnboardingModal';
 import { GharChatbotModal } from './components/GharChatbotModal';
 import { CustomerTestimonials } from './components/CustomerTestimonials';
 import { Footer } from './components/Footer';
+import { CursorTrail } from './components/CursorTrail';
 
 import {
   SERVICE_CATEGORIES,
@@ -201,6 +202,7 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-stone-50 font-sans text-stone-800 antialiased selection:bg-emerald-200 selection:text-emerald-900 relative">
+      <CursorTrail />
       
       {/* Primary Header Navbar */}
       <Navbar

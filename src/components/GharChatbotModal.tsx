@@ -87,7 +87,9 @@ export const GharChatbotModal: React.FC<GharChatbotModalProps> = ({
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ query, city: currentCity }),
         });
-        const data = await response.json();
+        const resText = await response.text();
+        let data: any = {};
+        try { data = resText ? JSON.parse(resText) : {}; } catch (_) {}
 
         if (data.success) {
           const aiMsg: ChatMessage = {
@@ -107,7 +109,9 @@ export const GharChatbotModal: React.FC<GharChatbotModalProps> = ({
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ searchQuery: query, city: currentCity }),
         });
-        const data = await response.json();
+        const resText = await response.text();
+        let data: any = {};
+        try { data = resText ? JSON.parse(resText) : {}; } catch (_) {}
 
         if (data.success) {
           const aiMsg: ChatMessage = {
@@ -131,7 +135,9 @@ export const GharChatbotModal: React.FC<GharChatbotModalProps> = ({
             city: currentCity,
           }),
         });
-        const data = await response.json();
+        const resText = await response.text();
+        let data: any = {};
+        try { data = resText ? JSON.parse(resText) : {}; } catch (_) {}
 
         if (data.success) {
           const aiMsg: ChatMessage = {
@@ -190,7 +196,9 @@ export const GharChatbotModal: React.FC<GharChatbotModalProps> = ({
                 mimeType: 'audio/webm',
               }),
             });
-            const data = await response.json();
+            const resText = await response.text();
+            let data: any = {};
+            try { data = resText ? JSON.parse(resText) : {}; } catch (_) {}
             if (data.success && data.text) {
               handleSendMessage(data.text);
             } else {
