@@ -1,0 +1,10 @@
+{
+  "name": "Apna Ghar - Local Home Services",
+  "description": "Book trusted local electricians, plumbers, cleaners, painters, and technicians right at your door with instant AI diagnostics.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

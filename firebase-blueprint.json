@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profiles",
+      "description": "User account details and preferences",
+      "type": "document",
+      "path": "users/{userId}",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "city": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "userBookings": {
+      "title": "User Service Bookings",
+      "description": "Bookings created by users",
+      "type": "document",
+      "path": "users/{userId}/bookings/{bookingId}",
+      "properties": {
+        "id": { "type": "string" },
+        "serviceName": { "type": "string" },
+        "category": { "type": "string" },
+        "proId": { "type": "string" },
+        "proName": { "type": "string" },
+        "proAvatar": { "type": "string" },
+        "date": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "address": { "type": "string" },
+        "city": { "type": "string" },
+        "pincode": { "type": "string" },
+        "phone": { "type": "string" },
+        "notes": { "type": "string" },
+        "status": { "type": "string" },
+        "totalAmount": { "type": "number" },
+        "paymentMethod": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "isEmergency": { "type": "boolean" }
+      }
+    },
+    "partnerApplications": {
+      "title": "Partner Network Applications",
+      "description": "Technicians registering to join Apna Ghar",
+      "type": "document",
+      "path": "partnerApplications/{appId}",
+      "properties": {
+        "fullName": { "type": "string" },
+        "phone": { "type": "string" },
+        "trade": { "type": "string" },
+        "experienceYears": { "type": "string" },
+        "city": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "userId": { "type": "string" }
+      }
+    }
+  }
+}
